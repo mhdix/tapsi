@@ -4,7 +4,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  list-style: none;
 }
 html {
   font-size: 62.5%;
@@ -93,7 +92,7 @@ h2 {
   padding: 0.75rem 1.5rem;
   font-size: 1.4rem;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .badge--secondary {
@@ -113,4 +112,26 @@ h2 {
   }
 }
 
-/*  */
+/* LIST */
+.list {
+  list-style: none;
+  font-size: 1.4rem;
+}
+
+.list--tick .list__item {
+  background: url(../assets/image/done-icon.svg) no-repeat;
+  background-position: right center;
+  padding-right: 3.5rem;
+}
+
+.list--tick .list__item{
+  background-color: #ffa589;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list{
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+}

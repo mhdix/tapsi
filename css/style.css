@@ -5,12 +5,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
 }
 /* ROOT VARIABLE */
 :root {
   --color-primary: #ff5722;
+  --color-primary-light: #ff7a50;
   --color-secondary-light: #fff6f2;
   --color-secondary-dark: #ffa589;
   --color-navbar: #f8f8f8;
@@ -37,6 +39,7 @@ h1 {
 h2 {
   font-size: 2.2rem;
 }
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -60,6 +63,9 @@ h2 {
   text-align: center;
   white-space: nowrap;
   font-size: 1.4rem;
+  /*  */
+  
+  
 }
 
 .btn--primary {
@@ -71,6 +77,7 @@ h2 {
   background-color: var(--color-secondary-dark);
   color: var(--color-white);
 }
+
 .btn--block {
   width: 100%;
   font-size: 1.6rem;
@@ -121,17 +128,86 @@ h2 {
 .list--tick .list__item {
   background: url(../assets/image/done-icon.svg) no-repeat;
   background-position: right center;
-  padding-right: 3.5rem;
+  padding-right: 4.5rem;
 }
 
 .list--tick .list__item{
-  background-color: #ffa589;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3.5rem;
 }
 
 @media screen and (min-width: 1024px) {
   .list{
     font-size: 1.8rem;
     margin-bottom: 3rem;
+  }
+} 
+
+
+
+/* PLAN */
+.block-plane{
+  display: grid;
+  gap: 2rem 3rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.plane {
+  max-width: 500px;
+  font-size: 1.8rem;
+}
+
+/* CARD */
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 10px #efefefce;
+}
+
+.card__header , .card__body {
+  padding: 3rem 2.5rem;
+}
+/*  */
+.card__body {
+  height: 35rem;
+  display: grid;
+  align-content: space-between;
+}
+/*  */
+.card__header , h2 ,h3{
+  color: var(--color-white);
+}
+.card__header {
+  background-color: var(--color-secondary-dark);
+  /*  */
+  display: grid;
+  row-gap: 1.5rem;
+}
+.card--primary .card__header{
+  background: var(--color-primary-light);
+}
+.card--secondary .card__header {
+
+}
+/*  */
+.plan__price {
+  display: flex;
+  font-size: 3rem;
+}
+.plan__billing-cycle{
+  font-size: 1.4rem;
+  margin-block: revert;
+}
+.plan__description {
+   
+}
+.plan__introduction{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:1024px) {
+  .block-plane {
+    grid-template-columns: repeat(3 , 1fr);
   }
 }

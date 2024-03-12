@@ -78,10 +78,6 @@ h2 {
   color: var(--color-white);
 }
 
-.btn--block {
-  width: 100%;
-  font-size: 1.6rem;
-}
 
 @media screen and (min-width: 1024px) {
   .btn {
@@ -99,7 +95,7 @@ h2 {
   padding: 0.75rem 1.5rem;
   font-size: 1.4rem;
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .badge--secondary {
@@ -145,18 +141,61 @@ h2 {
 
 
 /* PLAN */
-.block-plane{
+.block-plan{
   display: grid;
   gap: 2rem 3rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
   justify-content: center;
+  font-size: 1.4rem;
 }
 
-.plane {
-  max-width: 500px;
+.plan {
+  max-width: 450px;
   font-size: 1.8rem;
 }
 
+.plan__price {
+  display: flex;
+  font-size: 3rem;
+}
+
+.plan__billing-cycle{
+  font-size: 1.4rem;
+  margin-block: auto;
+}
+
+.plan__description {
+   
+}
+.plan__introduction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.plan .btn--block {
+  font-size: 1.6rem;
+  width: 100%;
+}
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+.plan:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease-out;
+}
+@media screen and (min-width:1024px) {
+  .block-plan {
+    grid-template-columns: repeat(3 , 1fr);
+  }
+  .plan .btn--block {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+  
+.plan--popular {
+  transform: scale(1.1);
+}
+}
 /* CARD */
 .card {
   border-radius: 20px;
@@ -179,7 +218,6 @@ h2 {
 }
 .card__header {
   background-color: var(--color-secondary-dark);
-  /*  */
   display: grid;
   row-gap: 1.5rem;
 }
@@ -189,25 +227,8 @@ h2 {
 .card--secondary .card__header {
 
 }
-/*  */
-.plan__price {
-  display: flex;
-  font-size: 3rem;
-}
-.plan__billing-cycle{
-  font-size: 1.4rem;
-  margin-block: revert;
-}
-.plan__description {
-   
-}
-.plan__introduction{
-    display: flex;
-    justify-content: space-between;
-}
+
 
 @media screen and (min-width:1024px) {
-  .block-plane {
-    grid-template-columns: repeat(3 , 1fr);
-  }
+
 }

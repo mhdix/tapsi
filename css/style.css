@@ -141,17 +141,19 @@ h2 {
 
 
 /* PLAN */
+
+.plan {
+  font-size: 1.8rem;
+  transition: all 0.2s ease-out;
+}
+
 .block-plan{
   display: grid;
-  gap: 2rem 3rem;
+  gap: 7rem 4rem;
+  grid-template-columns: repeat(auto-fit  ,minmax(250PX , 310PX));
   margin-top: 4rem;
   justify-content: center;
   font-size: 1.4rem;
-}
-
-.plan {
-  max-width: 450px;
-  font-size: 1.8rem;
 }
 
 .plan__price {
@@ -184,17 +186,17 @@ h2 {
   transition: all 0.2s ease-out;
 }
 @media screen and (min-width:1024px) {
-  .block-plan {
+  /* .block-plan {
     grid-template-columns: repeat(3 , 1fr);
-  }
+  } */
   .plan .btn--block {
     font-size: 1.8rem;
     width: 100%;
   }
   
-.plan--popular {
-  transform: scale(1.1);
-}
+  .plan--popular {
+    transform: scale(1.1);
+  }
 }
 /* CARD */
 .card {
@@ -231,4 +233,10 @@ h2 {
 
 @media screen and (min-width:1024px) {
 
+}
+
+/* CONTAINER */
+.container{
+  max-width: 1140px;
+  margin:  0 auto;
 }

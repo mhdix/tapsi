@@ -41,7 +41,7 @@ h2 {
   margin-bottom: 1.5rem;
 }
 p{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 a{
   text-decoration: none;
@@ -299,16 +299,19 @@ a{
 .contact-us__map {
   display: none;
 }
-.contact-us__icon {
+.contact-us__social {
   display: grid;
   grid-template-columns: repeat(3 , 1fr);
 }
+
 @media screen and (min-width: 1024px) {
   .contact-us {
     grid-template-areas: 
-    'icon form'
     'address form'
-    'map form';
+    'map form'
+    'social form'
+    'icons form'  
+    ;
     grid-template-columns: 70fr  30fr;
   }
   .contact-us__form{
@@ -318,7 +321,84 @@ a{
     grid-area: map;
     display: block; 
   }
-  .contact-us__address{
+  .contact-us__icons{
     grid-area: address;
   }
+}
+/* ICONS */
+.icon {
+  width: 40px;
+  height: 40px;
+}
+.icon--small{
+  width: 32px;
+  height: 32px;
+}
+.icon-container {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.contact-us__icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+}
+.contact-us__icons .icon-holder {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.icon-holder__label {
+  display: block;
+  min-width: 100px;
+} 
+
+/* CONTACT-US SOCIAL  */
+
+.contact-us__social .icon-container{
+  margin-left: ;
+}
+.contact-us__social {
+  display: flex;
+  background-color: red;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 1024px) {
+  .contact-us__icons {
+    font-display: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .contact-us__social {
+    justify-content: flex-end;
+  }
+  .contact-us__social .icon-container {
+    margin-left: 2rem;
+  }
+  .contact-us__icons {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .contact-us__icons .icon-holder {
+    flex-direction: column;
+  } 
+  .icon-holder__label {
+    order: 2 ;
+    max-width: 250px;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
 }

@@ -5,6 +5,8 @@
     src: url(/assets/fonts/IRANYekan.woff);
 }
 
-body{
+body, 
+button{
     font-family: 'iranyekan';
+
 }

@@ -137,12 +137,17 @@ h2 {
 /* Plan */
 .block-plan {
     display: grid;
-    gap: 2rem;
+    gap: 5rem ;
+    margin-top: 4rem;
+    justify-content: center;
+    /* ! auto-fit: میاد اون ستون اضافه ای که درست میکنه رو بین محتوا تقسیم میکنه */
+    /* ! auto-fill: ستون که ایجاد میکنه فضای خالیه و به محتوا اختصاص نمیده */
+    grid-template-columns: repeat(auto-fill , minmax(250px , 300px));
 }
 
 .plan {
-    max-width: 500px;
-     font-size: 1.8rem;
+    font-size: 1.8rem;
+    transition: all 0.2s ease-out;
 }
 .card {
     border-radius: 20px;
@@ -181,9 +186,36 @@ h2 {
     margin-top: 1.5rem;
     display: block;
 }
+.plan .btn--block {
+    margin-top: 10rem;
+    font-size: 1.6rem;
+}
+.plan--popular {
+    /* transform:  scale(1.1); */
+}
+.plan--popular:hover {
+    transform:  scale(1.20);
+}
+.plan.plan:hover {
+    transform: scale(1.05);
+}
 @media screen and (min-width: 1024px) {
-    .block-plan {
+    /* .block-plan {
         grid-template-columns: repeat(3, 1fr);
-    }
+    } */
+    .plan .btn--block {
+    font-size: 1.8rem;
+}
 
+.plan--popular {
+    transform:  scale(1.1);
+}
+}
+
+
+/* Container */
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
 }

@@ -343,9 +343,6 @@ h2 {
 }
 
 /* Social icons */
-/* .contact-us__icons .icon-container {
-    margin-left: ;
-} */
 
 .contact-us__social{
     display: flex;
@@ -360,5 +357,12 @@ h2 {
     .contact-us__social .icon-container {
         margin-left: 2rem;
     }
-    
+        
+}
+
+
+/* Map */
+.contact-us__map img {
+    width: 100%;
+    height: auto;
 }

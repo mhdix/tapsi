@@ -269,6 +269,9 @@ h2 {
 .contact-us__map {
     display: none;
 }
+.contact-us__form {
+    margin-right: 0;
+}
 
 .icon-holder__label {
     margin-left: 1rem;
@@ -349,10 +352,12 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 2.5rem;
 }
 @media screen and (min-width : 1024px) {
     .contact-us__social {
         justify-content: flex-end;
+        margin-bottom: 0;
     }
     .contact-us__social .icon-container {
         margin-left: 2rem;
@@ -420,6 +425,10 @@ textarea {
 .form-wrapper input:focus , .form-wrapper textarea:focus {
     border: 1px solid var(--color-primary);
 }
+
 @media screen and (min-width:1024px) {
     
+.contact-us__form {
+    margin-right: 2rem;
+}
 }

@@ -288,3 +288,19 @@ h2 {
         grid-area: address;
     }
 }
+
+/* Icons */
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-container {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #f6f6f6;
+}

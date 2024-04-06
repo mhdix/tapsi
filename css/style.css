@@ -261,3 +261,30 @@ h2 {
         width: 100%;
     }
 }
+
+/* Contact-us */
+.contact-us {
+    display: grid;
+}
+.contact-us__map {
+    display: none;
+}
+@media screen and (min-width: 1024px) {
+    .contact-us {
+        grid-template-areas: 
+        "address form"
+        "map form" 
+        'icons form';
+        grid-template-columns: 70fr 30fr;
+    }
+    .contact-us__form {
+        grid-area: form;
+    }
+    .contact-us__map{
+        grid-area: map;
+        display: block;
+    }
+    .contact-us__address {
+        grid-area: address;
+    }
+}

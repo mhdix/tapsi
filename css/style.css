@@ -535,9 +535,6 @@ textarea {
 .nav__item > a:hover {
     color: var(--color-primary);
     background-color: orange;
-}    
-.nav__toggler {
-    background-color: gold;
 }
 .nav__list .btn {
    padding: 1rem 3rem;
@@ -568,4 +565,29 @@ textarea {
         text-decoration: none;
         padding-bottom: 1rem;
     }
+}
+
+/* Toggler */
+.nav__toggler {
+    cursor: pointer;
+
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.4s ease-out;
+}
+
+.nav.nav__expanded .bar__one{
+    transform:rotate(-45deg) translate(-7px, 5px);
+}
+.nav.nav__expanded .bar__two{
+    opacity: 0;
+    transform:translateX(-20px);
+}
+.nav.nav__expanded .bar__tree{
+    transform:rotate(45deg) translate(-5px, -5px);
 }

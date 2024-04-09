@@ -82,6 +82,8 @@ h2 {
     font-size: 1.6rem;
 }
 
+
+ 
 @media screen and (min-width:1024px) {
     .btn {
         font-size: 1.6rem;
@@ -226,20 +228,21 @@ h2 {
 /* Feature */
 .feature {
     display: grid;
-    
+    padding: 2rem;
+    gap: 6rem ;
 }
-
 .feature .btn {
     padding: 1.5rem 3rem;
 }
 .feature__text {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: justify;
 }
 .feature__image > img{
-    width: 70%; 
+    width: 100%; 
     height: auto;
     text-align: center;
-
+    object-fit: cover;
 }
 .feature__image {
     display: flex;
@@ -250,10 +253,13 @@ h2 {
     .feature {
         grid-template-columns: repeat(2, 1fr);
     }
+    .charge .feature__image {
+        order: 1;
+    }
     .feature__image  {
         order: 2;
         margin-bottom: 0;
-    }
+    }F
     .feature__detail {
         order: 1 ;
     }
@@ -367,6 +373,9 @@ h2 {
 
 
 /* Map */
+.contact-us__map {
+    display: block;
+}
 .contact-us__map img {
     width: 100%;
     display: grid;
@@ -384,7 +393,7 @@ h2 {
 }
 
 .form-wrapper h3 {
-    margin: 5.2rem 0;
+    margin: 0;
     text-align: center;
 }
 
@@ -430,6 +439,14 @@ textarea {
     
 .contact-us__form {
     margin-right: 2rem;
+}
+.contact-us__map {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    align-self: center;
 }
 }
 
@@ -594,13 +611,15 @@ textarea {
 
 /* Hero Section */
 .hero-section {
+    position: relative;
     width: 100%;
     height: 478px;
 }
-.hero-section img {
+.hero-section .banner-img {
     width: 100%;
     height: auto;
 }
+
 .hero-wrapper {
     position: absolute;
     top: 0;
@@ -613,7 +632,7 @@ textarea {
 
 .intro-btn {
     border-radius: 20px;
-    background-image: linear-gradient(51deg,rgba(23,26,60,.7) 5%,rgba(23,26,60,.3) 95%);
+    background-image: linear-gradient(51deg,rgba(23, 26, 60, 0.831) 5%,rgba(23, 26, 60, 0.686) 95%);
     padding: 16px;
     border-radius: 12px;
     display: flex;
@@ -635,8 +654,9 @@ textarea {
     border-radius: 12px;
     margin-bottom: 1.5rem;
     padding: 13px;
-    width: 220px;
+    width: 240px;
 }
+
 .intro-wrapper {
     display: flex;
     flex-direction: column;
@@ -660,6 +680,19 @@ textarea {
     grid-template-columns: .5fr auto;
     width: 100%;
 }
+.intro-btn__passenger--outline {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid whitesmoke;
+}
+.banner-phone{
+    display: none;
+    position: absolute;
+    left: 10%;
+    bottom: -50%;
+    height: auto;
+    width: 420px;
+}
 @media screen and (min-width: 768px) {
     .hero-wrapper {
         justify-content: flex-start;
@@ -670,9 +703,10 @@ textarea {
         align-items: center;
     }   
     .intro-btn {
-        width: 530px;
+        width: 560px;
         padding: 25px;
         border-radius: 20px;
+        margin-right: 15rem;
     }
     .intro-btn h1{
         font-size: 5rem;
@@ -680,7 +714,9 @@ textarea {
     .intro-btn h2 {
         font-size: 2.5rem;
     }
-
+    .banner-phone{
+        display: block;
+    }
 }
 
 /* Services */
@@ -706,6 +742,8 @@ textarea {
 }
 .services__tabs img {
     max-width: 85px;
+    display: flex;
+    justify-content: flex-start;
 }
 .services__tabs .tab {
     opacity: 0.5;
@@ -718,6 +756,7 @@ textarea {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
+
 }
 .services .feature__title {
     margin: 2.5rem 0 1rem  0;
@@ -734,7 +773,17 @@ textarea {
     justify-content: space-between;
     align-items: center;
 }
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: flex;
+}
+.tab.active {
+    opacity: 1;
+}
 @media screen and (min-width: 1024px) {
+    
     .services__tabs .tab > p {
         margin-top: 1rem;
         font-size: 1.4rem;
@@ -751,18 +800,27 @@ textarea {
     }
     
     .feature__detail {
-        width: 50%;   
+        width: 100%;   
+    }
+    .feature.charge .feature__image {
+        order: 0;
     }
 }
 
 
 
-.tab-content {
-    display: none;
+.block {
+    padding: 3rem 2rem;
 }
-.tab-content.active {
-    display: flex;
+.block-heading {
+    padding-top: 1rem;
 }
-.tab.active {
-    opacity: 1;
+@media screen and (min-width: 768px) {
+    .block {
+        padding: 8rem 2rem  ;
+    }
+    
+.block-heading {
+    padding-top: 3rem;
+}
 }

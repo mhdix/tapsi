@@ -689,6 +689,7 @@ textarea {
     flex-direction: row;
     justify-content: space-between;
     overflow: auto;
+    padding: 5px 0 15px;
 }
 .services__tabs a {
     display: block;
@@ -713,6 +714,26 @@ textarea {
 .services__tabs .tab:hover{
     opacity: 1;
 }
+.services__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.services .feature__title {
+    margin: 2.5rem 0 1rem  0;
+}
+.services .feature__image {
+    display: none;
+}
+
+.feature__detail {
+    width: 100%;
+}
+.tab-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 @media screen and (min-width: 1024px) {
     .services__tabs .tab > p {
         margin-top: 1rem;
@@ -721,5 +742,27 @@ textarea {
     .services__tabs img {
         width: 100%;
     }
+    .services__title {
+        margin-bottom: 30px;
+    }   
+    
+    .services .feature__image {
+        display: block;
+    }
+    
+    .feature__detail {
+        width: 50%;   
+    }
+}
 
+
+
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: flex;
+}
+.tab.active {
+    opacity: 1;
 }

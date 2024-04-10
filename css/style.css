@@ -694,10 +694,17 @@ textarea {
     height: auto;
     width: 420px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1140px) {
     .hero-wrapper {
         justify-content: flex-start;
     }
+    
+    .banner-phone{
+        display: block;
+    }
+}
+@media screen and (min-width: 768px) {
+    
     .intro-wrapper {
         flex-direction: row;
         justify-content: space-between;
@@ -714,9 +721,6 @@ textarea {
     }
     .intro-btn h2 {
         font-size: 2.5rem;
-    }
-    .banner-phone{
-        display: block;
     }
 }
 
